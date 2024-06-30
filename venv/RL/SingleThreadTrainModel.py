@@ -55,16 +55,3 @@ model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=LOG_DIR, learning_rate=
 
 # Train the Model.
 model.learn(total_timesteps=1000000, callback=callback)
-
-# Load Model
-MODEL_DIR = './train/best_model_100000.zip' # You have to have run the model before this.
-model = PPO.load(MODEL_DIR)
-
-# Start the game
-state = env.reset()
-# Loop through frames
-while True:
-
-    action, _ = model.predict(state)
-    state, reward, done, info = env.step(action)
-    env.render()
