@@ -25,4 +25,5 @@ Frankly, I doubt anyone cares enough to do so, but I will include this nonethele
 - Wheel: 0.38.0
 - Setuptools: 65.5.0
 
+(All can be downloaded via pip)
 (I cannot guarantee this will function properly on any version other than those listed above, as that is what I developed with.)
