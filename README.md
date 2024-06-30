@@ -4,9 +4,10 @@
 
 The single-threaded implementation achieved the following results:
 
-- After about 2 million iterations, it occasionally beats level 1-1 of Super Mario Brothers.
+- At 1 million iterations, it never beats level 1-1.
+- At 2 million iterations, it occasionally beats level 1-1.
 - At 4 million iterations, it consistently beats level 1-1.
-- After 5 million iterations, it flawlessly completes level 1-1.
+- At 5 million iterations, it flawlessly completes level 1-1.
 
 ## "Multi-Threaded" Implementation
 
