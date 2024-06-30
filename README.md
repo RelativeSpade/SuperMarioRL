@@ -10,7 +10,7 @@ The single-threaded implementation achieved the following results:
 
 ## "Multi-Threaded" Implementation
 
-Currently, the multi-threaded implementation is not true multithreading. It can be likened to assigning 8 individuals to perform the same task simultaneously. True multi-threading involves a team of 8 people collaborating on the task. Therefore, I will not be spending time running iterations to test for performance differences, as it is incredibly unlikely to have any; however, I will return to this eventually to finish it.
+Currently, the multi-threaded implementation is not true multithreading. It can be likened to assigning 8 individuals to perform the same task simultaneously. True multi-threading involves a team of 8 people collaborating on the task. Therefore, I will not be spending time running iterations to test for performance differences, as it is incredibly unlikely to have any positive effect at this moment; however, I will return to this eventually to finish implementing proper multi-threading.
 
 # How to Run This Yourself?
 
