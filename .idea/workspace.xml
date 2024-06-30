@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ae9a630-a446-49ea-acba-6eedd7da63f8" name="Changes" comment="Added ability to load model">
+    <list default="true" id="6ae9a630-a446-49ea-acba-6eedd7da63f8" name="Changes" comment="minor changes">
+      <change afterPath="$PROJECT_DIR$/venv/RL/MultiThreadTrain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/RL/TrainAndLoggingCallback.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/RL/SuperMarioRL.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/RL/SuperMarioRL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/RL/SingleThreadTrainModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/RL/SingleThreadTrain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/RL/TrainingWrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/RL/TrainingWrapper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +54,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.SuperMarioRL.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.LoadModel.executor": "Run",
+    "Python.MultiThreadTrain.executor": "Run",
+    "Python.SuperMarioRL.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Spade\PycharmProjects\SuperMarioRL\venv\RL" />
@@ -85,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719741256686</updated>
-      <workItem from="1719741257719" duration="5622000" />
+      <workItem from="1719741257719" duration="7189000" />
     </task>
     <task id="LOCAL-00001" summary="better">
       <option name="closed" value="true" />
@@ -127,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719747669254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1719748965202</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719748965202</updated>
+    </task>
+    <task id="LOCAL-00007" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1719749175952</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719749175952</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,9 +158,12 @@
     <MESSAGE value="better" />
     <MESSAGE value="Finish Model" />
     <MESSAGE value="Added ability to load model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to load model" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SuperMarioRL$MultiThreadTrain.coverage" NAME="MultiThreadTrain Coverage Results" MODIFIED="1719750214694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/RL" />
+    <SUITE FILE_PATH="coverage/SuperMarioRL$LoadModel.coverage" NAME="LoadModel Coverage Results" MODIFIED="1719749093381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/RL" />
     <SUITE FILE_PATH="coverage/SuperMarioRL$SuperMarioRL.coverage" NAME="SuperMarioRL Coverage Results" MODIFIED="1719743505903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/RL" />
   </component>
 </project>
