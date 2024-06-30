@@ -1,15 +1,16 @@
 # Setup Game
 import gym_super_mario_bros
-import stable_baselines3
 from nes_py.wrappers import JoypadSpace
 from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
+
+import os
+from stable_baselines3 import PPO
+from stable_baselines3.common.callbacks import BaseCallback
 
 # Preprocess Environment && Import Frame Stacker Wrapper and GrayScaling Wrapper
 from gym.wrappers import GrayScaleObservation
 # Import Vectorization Wrappers
 from stable_baselines3.common.vec_env import VecFrameStack, DummyVecEnv
-# Import matplotlib
-from matplotlib import pyplot as plt
 
 # 1. Create Base Environment
 env = gym_super_mario_bros.make('SuperMarioBros-v0')
@@ -22,18 +23,14 @@ env = DummyVecEnv([lambda: env])
 # 5. Stack the Frames.
 env = VecFrameStack(env, 4, channels_order='last')
 
-# RL Algorithm
-# Import os for file path management, PPO for algos, Base Callback for saving
-import os
-from stable_baselines3 import PPO
-from stable_baselines3.common.callbacks import BaseCallback
 
+# RL Algorithm
 
 class TrainAndLoggingCallback(BaseCallback):
-    def __init__(self, check_freq, log_dir, verbose=1):
+    def __init__(self, check_freq, save_path, verbose=1):
         super(TrainAndLoggingCallback, self).__init__(verbose)
+        self.save_path = save_path
         self.check_freq = check_freq
-        self.log_dir = log_dir
 
     def _init_callback(self):
         if self.save_path is not None:
@@ -41,7 +38,7 @@ class TrainAndLoggingCallback(BaseCallback):
 
     def _on_step(self):
         if self.n_calls % self.check_freq == 0:
-            model_path = os.path.join(self.log_dir, 'best_model_{}'.format(self.n_calls))
+            model_path = os.path.join(self.save_path, 'best_model_{}'.format(self.n_calls))
             self.model.save(model_path)
 
         return True
@@ -50,4 +47,11 @@ class TrainAndLoggingCallback(BaseCallback):
 CHECKPOINT_DIR = './train/'
 LOG_DIR = './logs/'
 
+# Model Saving Callback
 callback = TrainAndLoggingCallback(check_freq=10000, save_path=CHECKPOINT_DIR)
+
+# Start the Model
+model = PPO('CnnPolicy', env, verbose=1, tensorboard_log=LOG_DIR, learning_rate=0.000001, n_steps=512)
+
+# Train the Model.
+model.learn(total_timesteps=1000000, callback=callback)
