@@ -22,7 +22,7 @@ env = DummyVecEnv([lambda: env])
 env = VecFrameStack(env, 4, channels_order='last')
 
 # Load Model
-MODEL_DIR = './train/best_model_100000.zip'  # You have to have run the model before this.
+MODEL_DIR = './train/best_model_300000.zip'  # You have to have run the model before this.
 model = PPO.load(MODEL_DIR)
 
 # Start the game
