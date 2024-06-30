@@ -17,6 +17,6 @@ class TrainingWrapper(gym.Wrapper):
         reward += (x_pos - self.prev_x_pos) * 0.1
         self.prev_x_pos = x_pos
         # Penalty for standing still
-        if action == SIMPLE_MOVEMENT.index('NOOP'):
+        if action == 0:
             reward -= 0.1
         return state, reward, done, info
