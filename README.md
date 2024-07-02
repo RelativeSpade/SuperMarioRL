@@ -1,5 +1,8 @@
 # Mario Reinforcement Learning
 
+This project explores using reinforcement learning to train an agent to play Super Mario
+
+
 ## Single-Threaded Version
 
 The single-threaded implementation achieved the following results:
