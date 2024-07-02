@@ -32,3 +32,6 @@ Frankly, I doubt anyone cares enough to do so, but I will include this nonethele
 (all can be downloaded via pip)
 
 (I cannot guarantee this will function properly on any version other than those listed above, as that is what I developed with.)
+```bash
+pip install stable-baselines3==1.5.0 gym==0.21.0 wheel==0.38.0 setuptools==65.5.0
+```
